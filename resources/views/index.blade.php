@@ -3,7 +3,7 @@
 {{-- --------------------------------------------------------------------- --}}
 
 @section('name')
-    <title>Categorias | Creación - AutoAdmin</title>
+    <title>Inicio - AutoAdmin</title>
 @endsection
 
 {{-- --------------------------------------------------------------------- --}}

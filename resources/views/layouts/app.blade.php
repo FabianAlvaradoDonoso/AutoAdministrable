@@ -1,154 +1,80 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sistema Autoadministrable</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href={{asset('css/normalize.css')}}>
-    <link rel="stylesheet" href={{asset('css/bootstrap.min.css')}}>
-    <link rel="stylesheet" href={{asset('css/font-awesome.min.css')}}>
-    <link rel="stylesheet" href={{asset('css/themify-icons.css')}}>
-    <link rel="stylesheet" href={{asset('css/flag-icon.min.css')}}>
-    <link rel="stylesheet" href={{asset('css/cs-skin-elastic.css')}}>
-    <!-- <link rel="stylesheet" href={.{asset('css/bootstrap-select.less')}}> -->
-    <link rel="stylesheet" href={{asset('scss/style.css')}}>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href={{asset('css/open-sans.css')}} rel='stylesheet' type='text/css'>
-    @yield('css')
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-        <!-- Left Panel -->
-
-    <aside id="left-panel" class="left-panel">
-        <nav class="navbar navbar-expand-sm navbar-default">
-
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="./"><img src={{asset('images/logo.png')}} alt="Logo"> </a>
-                <a class="navbar-brand hidden" href="./"><img src={{asset('images/logo2.png')}} alt="Logo"></a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
             </div>
-
-            <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="./"> <i class="menu-icon fa fa-home"></i>Dashboard </a>
-                    </li>
-
-
-                    <h3 class="menu-title">Modificaciones</h3><!-- /.menu-title -->
-                    <li class="">
-                        <a href="{{route('category.index')}}"> <i class="menu-icon fa fa-tags"></i>Categorias</a>
-                    </li>
-                    <li class="">
-                        <a href="{{route('product.index')}}"> <i class="menu-icon fa fa-archive"></i>Productos</a>
-                    </li>
-                    <!-- <li class="">
-                        <a href="Otros.php"> <i class="menu-icon fa fa-spinner"></i>Otros</a>
-                    </li> -->
-
-
-                    <h3 class="menu-title">Otros</h3>
-                    <li class="">
-                        <a href="{{url('/about')}}"> <i class="menu-icon fa fa-info"></i>Acerca de Redpanda</a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
         </nav>
-    </aside><!-- /#left-panel -->
 
-    <!-- Left Panel -->
-
-    <!-- Right Panel -->
-
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-        <header id="header" class="header">
-
-            <div class="header-menu">
-
-                <div class="col-sm-7">
-
-                </div>
-
-                <div class="col-sm-5">
-                    <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src={{asset('images/admin.jpg')}} alt="User Avatar">
-                        </a>
-
-                        <div class="user-menu dropdown-menu">
-                                <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
-
-                                <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
-
-                                <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
-
-                                <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
-                        </div>
-                    </div>
-
-                    <div class="language-select dropdown" id="language-select">
-                        {{-- <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
-                            <i class="flag-icon flag-icon-us"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="language" >
-                            <div class="dropdown-item">
-                                <span class="flag-icon flag-icon-fr"></span>
-                            </div>
-                            <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-es"></i>
-                            </div>
-                            <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-us"></i>
-                            </div>
-                            <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-it"></i>
-                            </div>
-                        </div> --}}
-                    </div>
-
-                </div>
-            </div>
-
-        </header><!-- /header -->
-        <!-- Header-->
-
-        @yield('body')
-
-
-    </div><!-- /#right-panel -->
-
-    <!-- Right Panel -->
-
-
-    <script src={{asset("js/vendor/jquery-2.1.4.min.js")}}></script>
-    {{-- <script src={{asset("js/jquery.js")}}></script> --}}
-    {{-- <script src={{asset("js/jquery-ui-1.10.4.min.js")}}></script>
-    <script src={{asset("js/jquery-1.8.3.min.js")}}></script> --}}
-    {{-- <script type="text/javascript" src={{asset("js/jquery-ui-1.9.2.custom.min.js")}}></script> --}}
-    {{-- <script src={{asset("js/bootstrap.min.js")}}></script> --}}
-    {{-- <script src={{asset("js/jquery.scrollTo.min.js")}}></script> --}}
-    <script src={{asset("js/jquery.nicescroll.js")}} type="text/javascript"></script>
-    <script src={{asset("js/scripts.js")}}></script>
-    <script src={{asset("js/popper.min.js")}}></script>
-    <script src={{asset("js/plugins.js")}}></script>
-    <script src={{asset("js/main.js")}}></script>
-    @yield('scripts')
-
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
 </body>
 </html>
