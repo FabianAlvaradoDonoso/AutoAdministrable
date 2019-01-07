@@ -100,20 +100,21 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
 
-        // $this->validate($request,[
-        //     'nombre'        => 'required',
-        //     'precio'        => 'required|integer',
-        //     'descripcion'   => 'required',
-        //     'categoria'     => 'required',
-        // ]);
+        $this->validate($request,[
+            'nombre'        => 'required',
+            'precio'        => 'required|integer',
+            'descripcion'   => 'required',
+            'categoria'     => 'required',
+        ]);
 
         if($request->destacado == 'on'){$request->destacado = 1;}else{$request->destacado = 0;}
         $product = Product::find($id);
         // dd($product);
         if($request->hasFile('imagen')){
-            $file_path = public_path() . '/images/products/' . $request->imagen;
+            $file_path = public_path() . '/images/products/' . $product->image;
             \File::delete($file_path);
-            $file = $request->file('imagen');
+
+            $file = $request->imagen;
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/products/', $name);
             $product->image = $name;
