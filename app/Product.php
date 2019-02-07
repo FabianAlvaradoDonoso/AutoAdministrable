@@ -13,4 +13,7 @@ class Product extends Model
     public function category(){
         return $this->belongsTo(Category::class)->select('id', 'name', 'description');
     }
+    public function suppliers(){
+        return $this->belongsToMany('\App\Supplier', 'products_suppliers');
+    }
 }

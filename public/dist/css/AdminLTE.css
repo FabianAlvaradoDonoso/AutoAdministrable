@@ -226,13 +226,13 @@ a:focus {
 .main-header .navbar-right {
   float: right;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .main-header .navbar-custom-menu a,
   .main-header .navbar-right a {
     color: inherit;
     background: transparent;
   }
-}
+} */
 @media (max-width: 767px) {
   .main-header .navbar-right {
     float: none;

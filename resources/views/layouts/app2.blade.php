@@ -13,7 +13,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href={{asset('bower_components/Ionicons/css/ionicons.min.css')}}>
   <!-- Theme style -->
-  <link rel="stylesheet" href={{asset('dist/css/AdminLTE.min.css')}}>
+  <link rel="stylesheet" href={{asset('dist/css/AdminLTE.css')}}>
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href={{asset('dist/css/skins/_all-skins.min.css')}}>
@@ -35,7 +35,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href={{url('/')}} class="logo">
+    <a href={{url('/dash')}} class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><img src={{asset('images/logo2.png')}} alt="Logo"></span>
       <!-- logo for regular state and mobile devices -->
@@ -138,9 +138,26 @@
           </li>
           <!-- User Account: style can be found in dropdown.less EN CONSTRUCCION -->
           <li class="dropdown user user-menu">
+                @guest
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="../../dist/img/loboPlateado.jpg" class="user-image" alt="User Image">
+                        <span class="hidden-xs">Invitado</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header" style="background: url('/dist/img/cielo.png') center center ;">
+                          <img src="../../dist/img/loboPlateado.jpg" class="img-circle" alt="User Image">
+
+                          <p class="" style="color: #ffffff">
+                              Invitado
+                            <small>Sesion de Prueba</small>
+                          </p>
+                        </li>
+                      </ul>
+                @else
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="../../dist/img/loboPlateado.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Lobo Plateado</span>
+                  <span class="hidden-xs">{{ Auth::user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -148,7 +165,7 @@
                     <img src="../../dist/img/loboPlateado.jpg" class="img-circle" alt="User Image">
 
                     <p class="" style="color: #ffffff">
-                      Lobo Plateado - Web Developer
+                        {{ Auth::user()->name }}
                       <small>Miembro desde 2019</small>
                     </p>
                   </li>
@@ -173,11 +190,15 @@
                       <a href="#" class="btn btn-info btn-sm">Perfil</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-danger btn-sm">Cerrar Sesión</a>
+                        <a href="{{ route('logout') }}" class="btn btn-danger btn-sm" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                   </li>
                 </ul>
               </li>
+              @endguest
           <!-- Control Sidebar Toggle Button -->
           <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
@@ -197,7 +218,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU DE NAVEGACION</li>
         <li>
-            <a href={{url('/')}}>
+            <a href={{url('/dash')}}>
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>

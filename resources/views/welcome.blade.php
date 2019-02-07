@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{asset('css/animate.css')}}">
 
         <!-- Styles -->
         <style>
@@ -45,11 +46,25 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 64px;
+                color: white;
             }
 
             .links > a {
-                color: #636b6f;
+                color: rgb(255, 255, 255);
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .links {
+                color: rgb(255, 255, 255);
+            }
+
+            .subMenu{
+                color: rgb(255, 255, 255);
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -61,36 +76,36 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .welcome {
+                color: rgb(255, 255, 255);
+            }
+
         </style>
     </head>
-    <body>
+    <body style="height:100%;background:url('/dist/img/fondo.jpg') no-repeat #475d62;background-size:cover;position:relative;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links animated fadeIn delay-2s slower">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        Bienvenido! <strong>{{Auth::User()->name}}</strong>
+                        <a style="color: white" href="{{ url('/dash') }}">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a style="color: white" href="{{ route('login') }}">Ingresar</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a style="color: white" href="{{ route('register') }}">Registrarse</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md animated fadeIn  slower">
+                    Sistema Auto-Administrable
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="subMenu animated fadeIn delay-1s slower">
+                    Control de la información de su pagina web
                 </div>
             </div>
         </div>

@@ -12,8 +12,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        // $request->user()->authorizeRoles('admin');   //Limita la entrada a lugares dependiendo el tipo de usuario .. No funciona Error 401
+
         $categories = Category::all();
         return view('Category.index', compact('categories'));
     }
@@ -100,7 +102,11 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::find($id)->delete();
-        return back()->with('success', 'Categoría eliminada con éxito');
+
+        if($category = Category::find($id)->delete()){
+            return back()->with('success', 'Categoría eliminada con éxito');
+        }else{
+            return back()->with('success', 'Error al borrar');
+        }
     }
 }

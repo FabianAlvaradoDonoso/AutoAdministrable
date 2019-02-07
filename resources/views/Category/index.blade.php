@@ -19,7 +19,9 @@
         <h1>
             Categorías
             <small>Listado</small>
-            <a href="{{route('category.create')}}" class="btn btn-primary btn-sm">Nuevo Productos</a>
+            {{-- @if (Auth::User()->roles->first()->pivot->role_id == 1) --}}
+                <a href="{{route('category.create')}}" class="btn btn-primary btn-sm">Nuevo Productos</a>
+            {{-- @endif --}}
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>

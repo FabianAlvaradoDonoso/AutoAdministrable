@@ -17,11 +17,15 @@ class CreateProductsTable extends Migration
             $table->engine = 'InnoDB';
 
             $table->increments('id');
+            $table->string('code');
             $table->string('name');
             $table->integer('price');
+            $table->integer('price_buy');
             $table->text('description');
             $table->string('image');
             $table->boolean('outstanding');
+            $table->integer('stock_min');
+            $table->integer('stock_recomm');
 
             $table->unsignedInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
