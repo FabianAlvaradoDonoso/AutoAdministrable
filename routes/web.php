@@ -42,6 +42,20 @@ Route::resource('user', 'UserController');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/index', function(){
+    return view('system.onepage.index');
+});
+Route::get('/schedule', function(){
+    return view('system.onepage.schedule');
+});
+Route::get('/about', function(){
+    return view('system.onepage.about');
+});
+Route::get('/contact', function(){
+    return view('system.onepage.contact');
+});
+
+
 // Ruta Autentificación
 Auth::routes();
 

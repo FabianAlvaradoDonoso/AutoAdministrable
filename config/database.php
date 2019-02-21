@@ -56,6 +56,18 @@ return [
             'engine' => null,
         ],
 
+        'clinica'  => [
+            'driver'     => 'mysql',
+            'host'       => env('CLINICA_HOST', '127.0.0.1'),
+            'database'   => env('CLINICA_DATABASE', 'forge'),
+            'username'   => env('CLINICA_USERNAME', 'forge'),
+            'password'   => env('CLINICA_PASSWORD', ''),
+            'charset'    => 'utf8',
+            'collation'  => 'utf8_unicode_ci',
+            'prefix'     => '',
+            'strict'     => false,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
