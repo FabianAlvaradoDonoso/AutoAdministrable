@@ -5,6 +5,6 @@ use Faker\Generator as Faker;
 $factory->define(App\Supplier::class, function (Faker $faker) {
     return [
         'name' => $faker->unique()->name,
-        'description' => $faker->sentences(3),
+        'description' => $faker->sentence(3),
     ];
 });
