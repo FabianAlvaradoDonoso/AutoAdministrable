@@ -453,7 +453,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .colorlib-doctor,
 #colorlib-contact,
 #colorlib-footer {
-  padding: 7em 0;
+  padding: 3em 0 0 0;
   clear: both; }
   @media screen and (max-width: 768px) {
     .colorlib-departments,
@@ -467,7 +467,7 @@ h1, h2, h3, h4, h5, h6, figure {
     .colorlib-doctor,
     #colorlib-contact,
     #colorlib-footer {
-      padding: 3em 0; } }
+      padding: 1em 0; } }
 
 #colorlib-footer {
   padding: 7em 0 0 0; }
@@ -1857,7 +1857,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: url(../images/loader.gif) center no-repeat #fff; }
 
 .row-padded-mb {
-  margin-bottom: 3em !important; }
+  margin-bottom: 1em !important; }
 
 .col-padded {
   margin: 0 !important;

@@ -63,32 +63,196 @@
         </div>
     </aside>
 
+        <div class="colorlib-doctor">
+            <div class="container">
+            <div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
+					<h2>Nuestros Servicios</h2>
+					<p></p>
+				</div>
+			</div>
+            </div>
+        </div>
+            
 
-    <aside id="colorlib-hero" class="breadcrumbs">
-            <div class="flexslider">
-                <ul class="slides">
-                <li style="background-image: url(vetportugal/images/img_bg_6.jpg);">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                                <div class="slider-text-inner">
-                                    <h1>Nuestros <strong>servicios &amp; especialidades</strong></h1>
-                                        <h2>Blablablablabla</h2>
-                                </div>
+        <div id="colorlib-services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 animate-box">
+                        <div class="services-2">
+                            <span class="icon">
+                                <i class="flaticon-hospital"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="#">Diagnostics and emergency treatment</a></h3>
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
                             </div>
                         </div>
                     </div>
-                </li>
-                </ul>
+                    <div class="col-md-4 animate-box">
+                        <div class="services-2">
+                            <span class="icon">
+                                <i class="flaticon-healthy-1"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="#">Home medical appointments</a></h3>
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-box">
+                        <div class="services-2">
+                            <span class="icon">
+                                <i class="flaticon-stethoscope"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="#">Pharmacy refunded from hospital</a></h3>
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 animate-box">
+                        <div class="services-2">
+                            <span class="icon">
+                                <i class="flaticon-blood-donation"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="#">Long term medical care in a hospital</a></h3>
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-box">
+                        <div class="services-2">
+                            <span class="icon">
+                                <i class="flaticon-radiation"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="#">A specialized laboratory research</a></h3>
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-box">
+                        <div class="services-2">
+                            <span class="icon">
+                                <i class="flaticon-ambulance"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="#">Medical transport to the hospital</a></h3>
+                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </aside>
-
-        <div id="colorlib-services">
-
+        </div>
+        <div class="colorlib-doctor">
+            <div class="container">
+            <div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
+					<h2>D</h2>
+					<p></p>
+				</div>
+			</div>
+            </div>
         </div>
 
-
+<div class="colorlib-departments">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="department-wrap animate-box">
+						<div class="grid-1 col-md-6" style="background-image: url(vetportugal/images/img_bg_1.jpg);"></div>
+						<div class="grid-2 col-md-6">
+							<div class="desc">
+								<h2><a href="departments-single.html">Plastic Surgery Department</a></h2>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,</p>
+								<div class="department-info">
+									<div class="block">
+										<h2><a href="doctors-single.html">Paul Merriweather</a></h2>
+										<span>Head Department</span>
+									</div>
+									<div class="block">
+										<h2><a href="departments-single.html">Department info</a></h2>
+										<span>Block B, 3rd floor</span>
+									</div>
+									<div class="block">
+										<h2><a href="doctors.html">Find a Doctor</a></h2>
+										<span>See doctors in this department</span>
+									</div>
+									<div class="block">
+										<h2><a href="appointment.html">Request an appointment</a></h2>
+										<span>Call us or fill in a form</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="department-wrap animate-box">
+						<div class="grid-1 col-md-6" style="background-image: url(vetportugal/images/img_bg_2.jpg);"></div>
+						<div class="grid-2 col-md-6">
+							<div class="desc">
+								<h2><a href="departments-single.html">Psychological Department</a></h2>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,</p>
+								<div class="department-info">
+									<div class="block">
+										<h2><a href="doctors-single.html">Paul Merriweather</a></h2>
+										<span>Head Department</span>
+									</div>
+									<div class="block">
+										<h2><a href="departments-single.html">Department info</a></h2>
+										<span>Block B, 3rd floor</span>
+									</div>
+									<div class="block">
+										<h2><a href="doctors.html">Find a Doctor</a></h2>
+										<span>See doctors in this department</span>
+									</div>
+									<div class="block">
+										<h2><a href="appointment.html">Request an appointment</a></h2>
+										<span>Call us or fill in a form</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="department-wrap animate-box">
+						<div class="grid-1 col-md-6" style="background-image: url(vetportugal/images/img_bg_6.jpg);"></div>
+						<div class="grid-2 col-md-6">
+							<div class="desc">
+								<h2><a href="departments-single.html">Psychological Department</a></h2>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,</p>
+								<div class="department-info">
+									<div class="block">
+										<h2><a href="doctors-single.html">Paul Merriweather</a></h2>
+										<span>Head Department</span>
+									</div>
+									<div class="block">
+										<h2><a href="departments-single.html">Department info</a></h2>
+										<span>Block B, 3rd floor</span>
+									</div>
+									<div class="block">
+										<h2><a href="doctors.html">Find a Doctor</a></h2>
+										<span>See doctors in this department</span>
+									</div>
+									<div class="block">
+										<h2><a href="appointment.html">Request an appointment</a></h2>
+										<span>Call us or fill in a form</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
         <div id="colorlib-doctor" class="colorlib-bg-section">
             <div class="container">
@@ -104,7 +268,7 @@
                                             <div class="item">
                                                         <div class="col-md-3 col-sm-6 col-xs-12">
                                                             <div class="doctor">
-                                                                <div class="staff-img" style="background-image: url(images/staff-1.jpg);"></div>
+                                                                <div class="staff-img" style="background-image: url(vetportugal/images/staff-1.jpg);"></div>
                                                                 <div class="desc">
                                                                     <span>Patient Services Manager</span>
                                                                     <h3><a href="#">Dr. Liza Thomas</a></h3>
@@ -119,7 +283,7 @@
                                                         </div><!--col doctor-->
                                                         <div class="col-md-3 col-sm-6 col-xs-12">
                                                             <div class="doctor">
-                                                                <div class="staff-img" style="background-image: url(vetportugal/images/staff-1.jpg);"></div>
+                                                                <div class="staff-img" style="background-image: url(vetportugal/vetportugal/images/staff-1.jpg);"></div>
                                                                 <div class="desc">
                                                                     <span>Patient Services Manager</span>
                                                                     <h3><a href="#">Dr. Liza Thomas</a></h3>
@@ -233,7 +397,7 @@
             </div> <!--container-->
         </div> <!--colorlib-doctor-->
 
-        <divh class="colorlib-blog">
+        <div class="colorlib-blog">
                 <div class="col-md-12 animate box" style="margin-top:50px; margin-bottom:50px;">
                     <h2 class="text-center">Siguenos en nuestras Redes Sociales</h2>
                 </div>

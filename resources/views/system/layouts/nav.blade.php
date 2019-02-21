@@ -33,20 +33,19 @@
                         <div class="col-md-8">
                             <div class="menu-1">
                                 <ul>
-                                    <li class="active"><a href="{{url('/index')}}">Home</a></li>
+                                    <li><a href="{{url('/index')}}">Home</a></li>
                                     <li><a href="#colorlib-services">Servicios</a></li>
                                     <li><a href="#colorlib-doctor">Doctores</a></li>
                                     <!--li><a href="#colorlib-testimonial">Testimonios</a></li-->
                                     <li class="has-dropdown">
                                         <a href="{{url('/schedule')}}">Reserva</a>
                                         <ul class="dropdown">
-                                            <li><a href="schedule.php">Cirugia</a></li>
-                                            <li><a href="schedule.php">Odontología</a></li>
-                                            <li><a href="schedule.php">Traumatología</a></li>
+                                            <li><a href="{{url('/schedule')}}">Cirugia</a></li>
+                                            <li><a href="{{url('/schedule')}}">Odontología</a></li>
+                                            <li><a href="{{url('/schedule')}}">Traumatología</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{url('/about')}}">Nosotros</a></li>
-                                    <li><a href="{{url('/contact')}}">Contacto</a></li>
+                                    <li><a href="{{url('/contact')}}">Contáctenos</a></li>
                                 </ul>
                             </div>
                         </div>
