@@ -9,7 +9,9 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
                             <div class="slider-text-inner">
-                                <h1>La salud de tu mascota es <strong>lo más importante</strong></h1>
+                                   
+                                <h1>Hola :S <strong>lo más importante</strong></h1>
+                     
                                     <h2>Por eso, blablablablablabla</h2>
                                     <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
                             </div>

@@ -19,7 +19,9 @@
                                 <div class="col-md-3">
                                     <div class="loc">
                                         <span class="icon"><i class="icon-location"></i></span>
-                                        <p><a href="https://goo.gl/maps/BR3WbKBFeSF2">Avenida Portugal 1015, Santiago Chile</a></p>
+                                        @foreach($offices as $office)
+                                        <p><a href="https://goo.gl/maps/BR3WbKBFeSF2">{{$office->adress}}</a></p>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

@@ -55,6 +55,7 @@ Route::get('/contact', function(){
     return view('system.onepage.contact');
 });
 
+Route::resource('offices', 'OfficeController');
 
 // Ruta Autentificación
 Auth::routes();
