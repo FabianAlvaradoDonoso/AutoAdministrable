@@ -224,8 +224,14 @@
         </li>
         <li class="header">MODIFICACIONES</li>
         <li>
-            <a href={{route('category.index')}}>
-                <i class="fa fa-tags"></i> <span>Categorías</span>
+            <a href={{route('Services.index')}}>
+                <i class="fa fa-tags"></i> <span>Servicios</span>
+            </a>
+            <a href={{route('Carousel.index')}}>
+                <i class="fa fa-tags"></i> <span>Carousel</span>
+            </a>
+            <a href={{route('Docprofile.index')}}>
+                <i class="fa fa-tags"></i> <span>Doctores</span>
             </a>
         </li>
         <li>
