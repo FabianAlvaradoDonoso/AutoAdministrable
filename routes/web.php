@@ -50,6 +50,7 @@ Route::resource('Office', 'OfficeController');
 
 
 
+
 Route::get('/index', function(){
     return view('system.onepage.index');
 });

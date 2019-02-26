@@ -18,11 +18,11 @@ class CreateCarouselsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('subtitle');
-            $table->string('description');
             $table->string('btntitle');
             $table->string('linktitle');
             $table->string('imagen');
-            $table->string('destacado');
+            $table->string('slug');
+
         });
     }
 

@@ -3,7 +3,7 @@
 {{-- --------------------------------------------------------------------- --}}
 
 @section('name')
-    <title>Carousel | Edición - AutoAdmin</title>
+    <title>Services | Edición - AutoAdmin</title>
 @endsection
 
 {{-- --------------------------------------------------------------------- --}}
@@ -12,8 +12,9 @@
 {{-- --------------------------------------------------------------------- --}}
 
 @section('css')
-<!-- Animate.css -->
-<link rel="stylesheet" href="{{asset('vetportugal/css/animate.css')}}">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{asset('vetportugal/css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="{{asset('vetportugal/css/icomoon.css')}}">
 	<!-- Bootstrap  -->
@@ -36,44 +37,36 @@
 @section('body')
     <section class="content-header">
         <h1>
-            Carousel
+            Servicios
             <small>Todos</small>
-            <a href="{{route('Carousel.create')}}" class="btn btn-primary btn-sm">Nuevo Contenedor</a>
-
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class=""><a href={{route('Carousel.index')}}>Carousel</a></li>
-            <li class="active">Edición</li>
+            <li class=""><a href={{route('Services.index')}}>Servicios</a></li>
+            <li class="active">Todos</li>
         </ol>
     </section>
 
     <section class="content">
-        @foreach($Carousels as $Carousel)
-        <div class="row">
-        <ul class="slides">
-                <li style="background-image: url(vetportugal/images/{{$Carousel->imagen}});">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                                <div class="slider-text-inner">
-                                    
-                                    {{$Carousel->title}}</h1>
-                        
-                                        <h2>{{$Carousel->subtitle}}</h2>
-                                        <p><a class="btn btn-primary btn-lg btn-learn" href="{{$Carousel->linkbtn}}">{{$Carousel->btntitle}}</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>            
-            </ul>
-            <div class="col-md-12">
-            @endforeach
-          
+    <div class="row" id="colorlib-departments">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4">
+					<div class="department-wrap animate-box">
+						<div class="grid-1 col-md-6" style="vetportugal('images/{{$Service->imagen}}')"></div>
+						<div class="grid-2 col-md-6">
+							<div class="desc">
+								<h2><a href="departments-single.html"></a></h2>
+								<p></p>
+							
+							</div>
+						</div>
+					</div>
+				</div>
             </div>
         </div>
+ 
+	</div>
     </section>
 @endsection
 

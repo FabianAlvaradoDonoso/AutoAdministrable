@@ -3,67 +3,67 @@
 <aside id="colorlib-hero">
         <div class="flexslider">
             <ul class="slides">
-            <li style="background-image: url(vetportugal/images/img_bg_6.jpg);">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                            <div class="slider-text-inner">
-                                   
-                                <h1>Hola :S <strong>lo más importante</strong></h1>
-                     
-                                    <h2>Por eso, blablablablablabla</h2>
-                                    <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
+                <li style="background-image: url(vetportugal/images/img_bg_6.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+                                <div class="slider-text-inner">
+                                    
+                                    <h1>Hola :S <strong>lo más importante</strong></h1>
+                        
+                                        <h2>Por eso, blablablablablabla</h2>
+                                        <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li style="background-image: url(vetportugal/images/img_bg_5.jpg);">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                            <div class="slider-text-inner">
-                                <h1>Nosotros podemos ayudarte a<strong> encontrar el profesional que estas buscando</strong></h1>
-                                    <h2>Contamos con múltiples especialistas blablabla.</h2>
-                                    <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
+                </li>
+                <li style="background-image: url(vetportugal/images/img_bg_5.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+                                <div class="slider-text-inner">
+                                    <h1>Nosotros podemos ayudarte a<strong> encontrar el profesional que estas buscando</strong></h1>
+                                        <h2>Contamos con múltiples especialistas blablabla.</h2>
+                                        <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li style="background-image: url(vetportugal/images/img_bg_1.jpg);">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                            <div class="slider-text-inner">
-                                <h1>Garantizamos <strong>seguridad, buenos precios </strong>  &amp; Calidad</h1>
-                                    <h2>4 años de experiencia en blablabla.</h2>
-                                    <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
+                </li>
+                <li style="background-image: url(vetportugal/images/img_bg_1.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+                                <div class="slider-text-inner">
+                                    <h1>Garantizamos <strong>seguridad, buenos precios </strong>  &amp; Calidad</h1>
+                                        <h2>4 años de experiencia en blablabla.</h2>
+                                        <p><a class="btn btn-primary btn-lg btn-learn" href="#">Reserva una atención médica</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li style="background-image: url(vetportugal/images/img_bg_2.jpg);">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                            <div class="slider-text-inner">
-                                <h1>Te ayudamos a <strong>velar por la Salud de tu mascota</strong> y su felicidad</h1>
-                                    <h2>En nuestra clínica puedes encontrar diversos productos blabla.</h2>
-                                    <p><a class="btn btn-primary btn-lg btn-learn" href="#">Ir a la Tienda	</a></p>
+                </li>
+                <li style="background-image: url(vetportugal/images/img_bg_2.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+                                <div class="slider-text-inner">
+                                    <h1>Te ayudamos a <strong>velar por la Salud de tu mascota</strong> y su felicidad</h1>
+                                        <h2>En nuestra clínica puedes encontrar diversos productos blabla.</h2>
+                                        <p><a class="btn btn-primary btn-lg btn-learn" href="#">Ir a la Tienda	</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
+                </li>
             </ul>
         </div>
-    </aside>
+</aside>
 
         <div class="colorlib-doctor">
             <div class="container">

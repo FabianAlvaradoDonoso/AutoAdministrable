@@ -21,6 +21,7 @@ class CreateServicesTable extends Migration
             $table->string('imagen');
             $table->string('destacado');
             $table->string('icon');
+            $table->string('slug')->unique();
         });
     }
 

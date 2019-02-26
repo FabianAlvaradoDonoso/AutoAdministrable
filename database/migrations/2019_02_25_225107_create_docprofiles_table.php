@@ -21,6 +21,8 @@ class CreateDocprofilesTable extends Migration
             $table->string('imagen');
             $table->string('destacado');
             $table->string('description');
+            $table->string('slug');
+
         });
     }
 

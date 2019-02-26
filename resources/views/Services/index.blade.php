@@ -39,6 +39,8 @@
         <h1>
             Servicios
             <small>Todos</small>
+            <a href="{{route('Services.create')}}" class="btn btn-primary">Nuevo Servicio</a>
+
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
@@ -59,7 +61,8 @@
 							<h3><a href="#">{{$Service->title}}</a></h3>
 							<p>{{$Service->description}}</p>
                         </div>
-                        <a class="btn btn-primary btn-block btn-sm">Editar</a>
+                        <a href="/Services/{{$Service->slug}}/edit" class="btn btn-primary btn-sm btn-block">Editar</a>
+                        <!--<a href="/Services/{{$Service->slug}}" class="btn btn-success btn-sm">Ver más</a>-->
 					</div>
 				</div>
      

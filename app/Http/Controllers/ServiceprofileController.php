@@ -48,10 +48,10 @@ class ServiceprofileController extends Controller
         $Service->title = $request->input('name');
         $Service->description = $request->input('description');
         $Service->destacado = $request->input('destacado');
+        $Service->slug = $request->input('name');
 
         $Service->save();
 
-        return 'guardado';
 
 
     }
@@ -62,9 +62,10 @@ class ServiceprofileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Service $Service)
     {
-        
+        //$Service = Service::where('slug', '=',$slug)->firstOrFail();
+        return view('Services.show', compact('Service'));
     }
 
     /**
@@ -73,9 +74,9 @@ class ServiceprofileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Service $Service)
     {
-        //
+        return view('Services.edit', compact('Service'));   
     }
 
     /**
@@ -85,9 +86,18 @@ class ServiceprofileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Service $Service)
     {
-        //
+        if($request->hasFile('imagen')){
+            $file = $request->file('imagen');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/vetportugal/images/', $name);
+        }
+        
+        $Service->fill($request->except('imagen'));
+        $Service->save();
+        return redirect()->route('Services.index')->with('success','Actualización exitosa.');
+
     }
 
     /**
