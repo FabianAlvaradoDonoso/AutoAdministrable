@@ -23,7 +23,8 @@ class DocprofileController extends Controller
      */
     public function create()
     {
-        //
+        return view('DocProfiles.create');
+
     }
 
     /**

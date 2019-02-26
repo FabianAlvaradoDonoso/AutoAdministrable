@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service;
 
 class ServiceprofileController extends Controller
 {
@@ -13,7 +14,8 @@ class ServiceprofileController extends Controller
      */
     public function index()
     {
-        return view('Services.index');
+        $Services = Service::all();
+        return view('Services.index', compact('Services'));
 
     }
 
@@ -24,7 +26,7 @@ class ServiceprofileController extends Controller
      */
     public function create()
     {
-        //
+        return view('Services.create');
     }
 
     /**
@@ -35,7 +37,23 @@ class ServiceprofileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile('imagen')){
+            $file = $request->file('imagen');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/vetportugal/images/', $name);
+        }
+        $Service = new Service();
+        $Service->imagen =$name;
+        $Service->icon = $name;
+        $Service->title = $request->input('name');
+        $Service->description = $request->input('description');
+        $Service->destacado = $request->input('destacado');
+
+        $Service->save();
+
+        return 'guardado';
+
+
     }
 
     /**
@@ -46,7 +64,7 @@ class ServiceprofileController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

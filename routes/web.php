@@ -44,6 +44,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('Services', 'ServiceprofileController');
 Route::resource('Carousel', 'CarouselController');
 Route::resource('Docprofile', 'DocprofileController');
+Route::resource('Office', 'OfficeController');
 
 
 

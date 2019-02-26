@@ -23,7 +23,8 @@ class CarouselController extends Controller
      */
     public function create()
     {
-        //
+        return view('Carousel.create');
+
     }
 
     /**
@@ -34,7 +35,8 @@ class CarouselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Service = new Service();
+        $Service->name->input('name');
     }
 
     /**

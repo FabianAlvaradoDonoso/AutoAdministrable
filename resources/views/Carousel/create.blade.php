@@ -3,7 +3,7 @@
 {{-- --------------------------------------------------------------------- --}}
 
 @section('name')
-    <title>Services | Edición - AutoAdmin</title>
+    <title>Carousel | Creación - AutoAdmin</title>
 @endsection
 
 {{-- --------------------------------------------------------------------- --}}
@@ -20,13 +20,13 @@
 @section('body')
     <section class="content-header">
         <h1>
-            Servicios
-            <small>Edición</small>
+            Carousel
+            <small>Crear</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class=""><a href={{route('Services.index')}}>Services</a></li>
-            <li class="active">Edición</li>
+            <li class=""><a href={{route('Carousel.index')}}>Carousel</a></li>
+            <li class="active">Crear</li>
         </ol>
     </section>
 

@@ -25,7 +25,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class=""><a href={{route('DocProfiles.index')}}>Doctores</a></li>
+            <li class=""><a href="">Doctores</a></li>
             <li class="active">Edición</li>
         </ol>
     </section>
